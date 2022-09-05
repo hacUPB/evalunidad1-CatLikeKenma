@@ -41,7 +41,7 @@
 @jump
  M=D
 
-@color
+@Color
 M= 1
  
  @RECT
@@ -76,7 +76,7 @@ M= 1
 @jump
  M=D
 
-@color
+@Color
 M = 0
 
 @RECT
@@ -84,7 +84,7 @@ M = 0
  
 
 
-@color
+@Color
 M= -1
  
 @RECT
@@ -104,7 +104,7 @@ M= -1
  @END
  D;JEQ//if count = 0 goto END
  
-@color
+@Color
 D=M 
 @pscreen
 A=M 
