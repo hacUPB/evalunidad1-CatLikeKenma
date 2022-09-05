@@ -1,6 +1,6 @@
 //SOFIA GONZALEZ HERNANDEZ
 //450810
-//sofigonh@gmail.com
+//sofia.gonzalezh@upb.edu.co
 
 
 (INICIO)
