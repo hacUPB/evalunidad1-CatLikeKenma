@@ -2,12 +2,13 @@
 //450810
 //sofigonh@gmail.com
 
+
 (INICIO)
 @KBD
  D=M
  @84  //T//
  D=D-A
- @VERTICAL//Realizar el rectangulo
+ @VERTICAL//Salto para hacer el rectangulo
  D;JEQ
  
 @KBD
@@ -30,11 +31,11 @@
 (VERTICAL)
 @16400//16384 + (128*32)
  D=A
-@coord//Variable de inicio de dibujo
+@coord//Variable de inicio del dibujo
  M=D 
-@256//Numero de registros
+@256//Registros a pintar
  D=A
-@count//contador filas 
+@count//Contador de filas
  M=D
 @32
  D=A 
@@ -47,27 +48,13 @@ M= 1
  @RECT
  0;JMP
 
-(HORIZONTAL)
-@20480//16384 + (128*32)
- D=A
-@coord//Variable de inicio de dibujo
- M=D
-@32//Numero de registros
- D=A
-@count//contador filas 
- M=D
-@1
- D=A 
-@jump
- M=D
-
 
 (BORRAR)
 @16384
  D=A
-@coord//Variable de inicio de dibujo
+@coord//Variable de inicio del dibujo
  M=D 
-@8300//Registros para pintar
+@8300//Registros a pintar
  D=A
 @count//Contador de filas
  M=D
@@ -82,6 +69,20 @@ M = 0
 @RECT
  0;JMP
  
+ 
+(HORIZONTAL)
+@20480//16384 + (128*32)
+ D=A
+@coord//Variable de inicio del dibujo
+ M=D 
+@32//Registros a pintar
+ D=A
+@count//Contador de filas
+ M=D
+@1
+ D=A 
+@jump
+ M=D
 
 
 @Color
@@ -95,7 +96,7 @@ M= -1
 @coord//16384 + (128*32)
  D=M
 @pscreen
- M=D //Memoria de inicio de pantalla
+ M=D //Memoria inicio de pantalla
  
 (PAINT)
 @count//D=count
@@ -108,7 +109,7 @@ M= -1
 D=M 
 @pscreen
 A=M 
-M=D //Pintar de negro el primer registro
+M=D //Registro inicial color negro
  
 @count//count = count-1
 M=M-1
